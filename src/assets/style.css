@@ -1,0 +1,115 @@
+
+
+/* =========   Global style in the site  start=========== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variable in color */
+:root{
+    --black-50:#313130;
+    --black-70: #252424;
+    --black-90: #201e1e;
+    --blue-100:#8A2BE2;
+    --white-60:#b8b4b4;
+    --white-100:#fff;
+}
+
+body{
+    background-color: var(--black-50);
+    font-family: system-ui,-apple-system;
+}
+
+.d-flex{
+    display: flex;
+}
+.d-flex-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.all-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.text-center{
+    text-align: center;
+    margin: 0 auto;
+}
+.d-block{
+    display: block;
+}
+.mt-5{
+    margin-top: 25px;
+}
+.mt-3{
+    margin-top: 15px;
+}
+.mt-2{margin-top: 10px;}
+.max-width{
+    max-width: 1190px;
+    margin: 0 auto;
+}
+.text-shadow-1{
+    text-shadow: 1px 2px 2px rgba(223, 228, 204, 0.87);
+}
+
+li{
+    list-style: none;
+}
+
+/* .linear-gradient{ (linear-gradient to right, #ff416c, #ff4b2b, #ff416c, #ff4b2b)}; */
+.active-gradient-text {
+    background: linear-gradient(to right, #caeb12, #5c9625dc,#e7482c);
+    -webkit-background-clip: text;
+    background-clip: text !important;
+    color: transparent !important;
+    font-size: 18px !important;
+    letter-spacing: .6px !important;
+    font-weight: 700 !important;
+}
+
+
+button{
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+input{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 9px 15px;
+}
+p{
+    font-size: 14px;
+    letter-spacing: .2px;
+}
+h1,h2,h3,h4,h5{
+    letter-spacing: .5px;
+}
+
+.button{
+    width:100px;
+    padding:12px 0;
+    border-top-left-radius: 32px;
+    border-bottom-right-radius: 33px;
+    /* background-image: linear-gradient(to right, rgb(57, 79, 179), red); */
+    background: transparent;
+    box-shadow: 1px 2px 4px 0 wheat inset, -1px -2px 4px 0 wheat inset;
+    color:var(--white-60);
+    font-size: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+.comment button:hover{
+    background: orangered;
+    box-shadow: none;
+}
