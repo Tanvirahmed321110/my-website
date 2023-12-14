@@ -95,7 +95,6 @@ export default {
 
 <style scoped>
     #footer{
-        position: absolute;
         padding: 45px 0;
         margin-top: auto;
         bottom:0;
@@ -112,9 +111,7 @@ export default {
         grid-template-columns: repeat(4, 1fr);
         gap:25px;
     }
-    .footer-col{
-        /* background:red; */
-    }
+    
     .footer-col-head{
         align-items: center;
         gap:14px;
@@ -159,8 +156,8 @@ export default {
         border-bottom-left-radius: 0;
     }
     .footer-email button i{color:white}
-    .footer-email button:hover{background: orange;}
-    .footer-email input:focus{background: orange;}
+    .footer-email button:hover{background: orange;transition: .3s;}
+    .footer-email input:focus{background: orange;transition: .5s;}
     
     
     /* component */

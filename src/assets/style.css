@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* variable in color */
 :root{
     --black-50:#313130;
@@ -14,6 +16,7 @@
     --black-90: #201e1e;
     --blue-100:#8A2BE2;
     --white-60:#b8b4b4;
+    --white-80:#f1f1f1;
     --white-100:#fff;
 }
 
@@ -63,12 +66,12 @@ li{
 }
 
 /* .linear-gradient{ (linear-gradient to right, #ff416c, #ff4b2b, #ff416c, #ff4b2b)}; */
-.active-gradient-text {
-    background: linear-gradient(to right, #caeb12, #5c9625dc,#e7482c);
+.active-gradient-text,.active-gradient-text a{
+    background: linear-gradient(to right, #caeb12, #5c9625dc,#e7482c) !important;
     -webkit-background-clip: text;
     background-clip: text !important;
     color: transparent !important;
-    font-size: 18px !important;
+    font-size: 18px;
     letter-spacing: .6px !important;
     font-weight: 700 !important;
 }
@@ -81,7 +84,9 @@ button{
     cursor: pointer;
     border-radius: 3px;
 }
-
+a{
+    text-decoration: none;
+}
 input{
     border: none;
     outline: none;
@@ -97,8 +102,7 @@ h1,h2,h3,h4,h5{
 }
 
 .button{
-    width:100px;
-    padding:12px 0;
+    padding:12px 35px;
     border-top-left-radius: 32px;
     border-bottom-right-radius: 33px;
     /* background-image: linear-gradient(to right, rgb(57, 79, 179), red); */

@@ -8,10 +8,10 @@
                 <div class="header-right">
                     <div class="header-right-nav">
                         <ul>
-                            <li class="active-gradient-text">Home</li>
-                            <li>About</li>
+                            <li class="active-gradient-text"><router-link to="/">Home</router-link></li>
+                            <li><router-link to="/about">About</router-link></li>
                             <li>Skill</li>
-                            <li>Project</li>
+                            <li><router-link to="projects">Project</router-link></li>
                             <li>Contact</li>
                             <li><i class="fa-regular fa-moon"></i></li>
                         </ul>
@@ -20,6 +20,7 @@
             </div>
         </div>
     </div>    
+    <router-view></router-view>
 </template>
 
 <script>
@@ -64,6 +65,11 @@
         position: relative;
         user-select: none;
     }
+    li a{color:aliceblue}
+    li a:active{
+        color:red;
+    }
+    
     .header-right-nav li::before{
         background: linear-gradient(to right, #b2b6b0,#2c2fe7, #c91720, #78f007dc,#2c38e7);
         cursor: pointer;
