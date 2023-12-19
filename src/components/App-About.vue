@@ -13,8 +13,19 @@
                     </div>
                 </div>
                 <div class="about-middle"></div>
+                
                 <div class="about-right">
-                    <img src="https://global.rowan.edu/images/programs/mem-header.jpg" alt="">
+                    <div class="flip-box">
+                        <div class="flip-box-inner">
+                            <div class="flip-box-front">
+                                <img src="https://global.rowan.edu/images/programs/mem-header.jpg" alt="">
+                            </div>
+                            <div class="flip-box-back">
+                                <h2>Me</h2>
+                                <h3>Thanks For Visite My Site</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -106,6 +117,24 @@ export default {
     .btn-about button span:hover{
         background-color:orangered;
     }
+    .button::after{
+    content: '';
+    position: absolute;
+    background:rgb(114, 83, 25);
+    height:45px;
+    width:0px;
+    border-radius:45px 0  0;
+    left:0px;
+    opacity: 0;
+    top:0;
+    transition: .4s;
+    z-index: -1;
+    }
+    .button:hover.button::after {
+        width:194px;
+        opacity: 1;
+    }
+    
     .about-middle{
         width:5px;
         margin: 0 auto;
@@ -130,6 +159,38 @@ export default {
         animation: imgAni 2.5s linear alternate infinite;
     }
     
+    /* cart flip srart here */
+    .flip-box{
+        background-color: transparent;
+        width:95%;
+        height:100%;
+        perspective: 1000px;
+        cursor: pointer;
+    }    
+    .flip-box-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: 1s;
+        transform-style: preserve-3d;
+    }
+    .flip-box:hover .flip-box-inner{
+        transform: rotateX(180deg);
+    }
+    .flip-box-front, .flip-box-back {
+        position: absolute;
+        width:100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .flip-box-back{
+        transform: rotateX(180deg);
+        background: orange;
+        border-radius: 15px;
+        border: 1px solid #f1f1f1;
+    }
     @keyframes imgAni {
         0%{
             transform: translateX(-10px);

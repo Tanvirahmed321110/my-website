@@ -38,11 +38,11 @@
                         <h3>Component</h3>
                     </div>
                     <div class="component">
-                        <li>App Home</li>
-                        <li>App About</li>
-                        <li>App Skill</li>
-                        <li>App Contact</li>
-                        <li>App Project</li>
+                        <li><router-link to="/">App Home</router-link></li>
+                        <li><router-link to="/about">App About</router-link></li>
+                        <li><router-link to="/skill">App Skill</router-link></li>
+                        <li><router-link to="/contact">App Contact</router-link></li>
+                        <li><router-link to="/project">App Project</router-link></li>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -168,6 +168,38 @@ export default {
         color:var(--white-60);
         margin-bottom: 10px;
     }
+    .component li a {
+    position: relative;
+}
+
+.component li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--white-60);
+    bottom: -4px;
+    left: 0;
+    transform: scaleX(0); 
+    transition: transform 0.3s linear; 
+}
+
+.component li a:hover::after {
+    transform: scaleX(1); /* Fully scaled up on hover */
+    transform-origin: left center;
+}
+
+.component li a::after {
+    transform: scaleX(0); /* Initial state when not hovering: fully scaled down */
+    transform-origin: right center; /* Set the transform origin to the right edge */
+}
+
+.component li a:not(:hover)::after {
+    transform: scaleX(0); /* Fully scaled down when not hovering */
+    transform-origin: right center;
+}
+
+
     /* contact */
     .contact{
         margin-top: 24px;
